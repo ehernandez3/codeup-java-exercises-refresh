@@ -155,7 +155,7 @@ public class HelloWorld {
 //		14. What happens if you assign a value to a numerical variable that is larger (or smaller)
 // 			than the type can hold? What happens if you increment a numeric variable past the type's capacity?
 
-				int myNumber = 2147483648; // Error: java: integer number too large: 2147483648
+//				int myNumber = 2147483648; // Error: java: integer number too large: 2147483648
 										   // Max value for integer is 2147483647
 
 				System.out.println(Byte.MIN_VALUE); // -128
