@@ -67,6 +67,15 @@ public class ConsoleExercises {
 //
 //		1. Prompt the user to enter values of length and width of a classroom at Codeup.
 //			Use the .nextLine method to get user input and cast the resulting string to a numeric type.
+
+					Scanner sc = new Scanner(System.in);
+					System.out.println("Please enter the length of the classroom in feet: ");
+					String length = sc.nextLine();
+					int lengthInFeet = Integer.parseInt(length);
+					System.out.println("Please enter the width of the classroom in feet: ");
+					String width = sc.nextLine();
+					int widthInFeet = Integer.parseInt(width);
+
 //
 //				- Assume that the rooms are perfect rectangles.
 //				- Assume that the user will enter valid numeric data for length and width.
@@ -75,6 +84,11 @@ public class ConsoleExercises {
 //
 //			The area of a rectangle is equal to the length times the width, and the perimeter of a rectangle is equal to 2 times the length plus 2 times the width.
 //
+					int roomArea = lengthInFeet * widthInFeet;
+					int roomPerimeter = (2 * lengthInFeet) + (2 * widthInFeet);
+					System.out.printf("The area of the classroom is %d\n", roomArea);
+					System.out.printf("The perimeter of the classroom is %d", roomPerimeter);
+
 //		3. Bonuses
 //
 //				- Accept decimal entries
