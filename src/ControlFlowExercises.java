@@ -1,3 +1,6 @@
+import java.sql.SQLOutput;
+import java.util.Scanner;
+
 public class ControlFlowExercises {
 	public static void main (String[] args) {
 
@@ -153,6 +156,33 @@ public class ControlFlowExercises {
 //				3      | 9       | 27
 //				4      | 16      | 64
 //				5      | 25      | 125
+
+
+//				Scanner sc = new Scanner(System.in);
+//				String proceed;
+//
+//				do {
+//					System.out.println("What number would you like to go up to? ");
+//					int userNum = sc.nextInt();
+//
+//					System.out.println("\nHere is your table!\n");
+//					System.out.println("number | squared | cubed");
+//					System.out.println("------ | ------- | -----");
+//
+//					for (int i = 1; i <= userNum; i ++) {
+//						int numSquared = (int) Math.pow(i, 2);
+//						int numCubed = (int) Math.pow(i, 3);
+//						System.out.printf("%-7d| %-8d| %-5d\n", i, numSquared, numCubed);
+//
+//					}
+//
+//					System.out.println("\nWould you like to enter another number?");
+//					proceed = sc.next();
+//
+//				} while (proceed.equalsIgnoreCase("y") || proceed.equalsIgnoreCase("yes"));
+
+
+
 //
 // 4. Convert given number grades into letter grades.
 //
@@ -168,6 +198,29 @@ public class ControlFlowExercises {
 //				C : 79 - 67
 //				D : 66 - 60
 //				F : 59 - 0
+
+
+				Scanner sc = new Scanner(System.in);
+				boolean confirm =
+
+				do {
+					System.out.println("Please enter a grade from 0 to 100: ");
+					int numGrade = sc.nextInt();
+
+					if (numGrade <= 59) {
+						System.out.println("Your grade is an F.");
+					} else if (numGrade <= 66) {
+						System.out.println("Your grade is a D.");
+					} else if (numGrade <= 79) {
+						System.out.println("Your grade is a C.");
+					} else if (numGrade <= 87) {
+						System.out.println("Your grade is a B.");
+					} else {
+						System.out.println("Your grade is an A.");
+					}
+
+				} while ();
+
 //
 // **Bonus**
 //
