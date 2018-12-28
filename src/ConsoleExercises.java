@@ -94,24 +94,53 @@ public class ConsoleExercises {
 //				- Accept decimal entries
 //				- Calculate the volume of the rooms in addition to the area and perimeter
 
+//					Scanner sc = new Scanner(System.in);
+//					System.out.println("Please enter the length of the classroom in feet: ");
+//					String lengthInFeet = sc.nextLine();
+//					double length = Double.parseDouble(lengthInFeet);
+//					System.out.println("Please enter the width of the classroom in feet: ");
+//					String widthInFeet = sc.nextLine();
+//					double width = Double.parseDouble(widthInFeet);
+//					System.out.println("Please enter the height of the classroom in feet: ");
+//					String heightInFeet = sc.nextLine();
+//					double height = Double.parseDouble(heightInFeet);
+//
+//					double roomArea = length * width;
+//					double roomPerimeter = (2 * length) + (2 * width);
+//					double roomVolume = length * width * height;
+//					System.out.printf("The area of the classroom is %.2f ft.\n", roomArea);
+//					System.out.printf("The perimeter of the classroom is %.2f ft.\n", roomPerimeter);
+//					System.out.printf("The volume of the classroom is %.2f ft.", roomVolume);
+
+
+//		The Scanner class can be told specifically what characters or pattern separates tokens
+// 		in a piece of input with the useDelimeter method. Add the following line of code to your
+// 		application after you have created a scanner (assuming the variable the holds the scanner is named scanner):
+//
+//		scanner.useDelimeter("\n");
+//
+//		How does this change the way your program operates?
+//
+//		Rewrite your classroom calculating program to use nextInt method. If you added the line of
+// 		code above to your application, you should now have no trouble handling multiple pieces of user input.
+
 					Scanner sc = new Scanner(System.in);
+					sc.useDelimiter("\n");
+
 					System.out.println("Please enter the length of the classroom in feet: ");
-					String lengthInFeet = sc.nextLine();
-					double length = Double.parseDouble(lengthInFeet);
+					double length = sc.nextInt();
 					System.out.println("Please enter the width of the classroom in feet: ");
-					String widthInFeet = sc.nextLine();
-					double width = Double.parseDouble(widthInFeet);
+					double width = sc.nextInt();
 					System.out.println("Please enter the height of the classroom in feet: ");
-					String heightInFeet = sc.nextLine();
-					double height = Double.parseDouble(heightInFeet);
+					double height = sc.nextInt();
 
 					double roomArea = length * width;
 					double roomPerimeter = (2 * length) + (2 * width);
 					double roomVolume = length * width * height;
+
 					System.out.printf("The area of the classroom is %.2f ft.\n", roomArea);
 					System.out.printf("The perimeter of the classroom is %.2f ft.\n", roomPerimeter);
 					System.out.printf("The volume of the classroom is %.2f ft.", roomVolume);
-
 
 	}
 }
