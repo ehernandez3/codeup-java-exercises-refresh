@@ -47,6 +47,8 @@ public class ConsoleInputAndOutput {
 //		// 3. print out the value the user entered.
 //				System.out.println("You entered: --> \"" + userInput + "\" <--");
 
+
+
 //		double dblTotal = 36;
 //		System.out.printf("Total is: $%,.2f%n", dblTotal);
 //		System.out.printf("Total: %-10.2f: ", dblTotal);
