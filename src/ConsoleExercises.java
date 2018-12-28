@@ -34,12 +34,12 @@ public class ConsoleExercises {
 // 		2. Prompt a user to enter 3 words and store each of them in a separate variable,
 // 			then display them back, each on a newline.
 
-					Scanner scanner = new Scanner(System.in);
-					System.out.println("Please enter 3 words: ");
-					String userInput1 = scanner.next();
-					String userInput2 = scanner.next();
-					String userInput3 = scanner.next();
-					System.out.format("%s\n%s\n%s\n", userInput1, userInput2, userInput3);
+//					Scanner scanner = new Scanner(System.in);
+//					System.out.println("Please enter 3 words: ");
+//					String userInput1 = scanner.next();
+//					String userInput2 = scanner.next();
+//					String userInput3 = scanner.next();
+//					System.out.format("%s\n%s\n%s\n", userInput1, userInput2, userInput3);
 
 //
 //				- What happens if you enter less than 3 words? // will keep waiting for third word until you enter it
@@ -47,10 +47,21 @@ public class ConsoleExercises {
 //
 // 		3. Prompt a user to enter a sentence, then store that sentence in a String variable
 // 			using the .next method, then display that sentence back to the user.
+
+//					Scanner scanner = new Scanner(System.in);
+//					System.out.println("Please enter a sentence: ");
+//					String userInput = scanner.next();
+//					System.out.println(userInput);
 //
-//				- do you capture all of the words?
+//				- do you capture all of the words? // No, because .next() will only capture the first token
 
 //		4. Rewrite the above example using the .nextLine method.
+
+//					Scanner scanner = new Scanner(System.in);
+//					System.out.println("Please enter a sentence: ");
+//					String userInput = scanner.nextLine();
+//					System.out.println(userInput);
+
 //
 //	Calculate the perimeter and area of Codeup's classrooms
 //
