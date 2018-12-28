@@ -14,7 +14,6 @@ public class ControlFlowExercises {
 //				5 6 7 8 9 10 11 12 13 14 15
 
 //					int i = 5;
-//
 //					while (i <= 15) {
 //						System.out.print(i + " ");
 //						i++;
@@ -25,7 +24,21 @@ public class ControlFlowExercises {
 //
 //			- Create a do-while loop that will count by 2's starting with 0 and ending at 100.
 // 				Follow each number with a new line.
+
+//					int num = 0;
+//					do {
+//						System.out.println(num);
+//						num += 2;
+//					} while (num <= 100);
+
 //			- Alter your loop to count backwards by 5's from 100 to -10.
+
+//					int num = 100;
+//					do {
+//						System.out.println(num);
+//						num -= 5;
+//					} while (num >= -10);
+
 //			- Create a do-while loop that starts at 2, and displays the number squared on each
 // 				line while the number is less than 1,000,000.
 //
@@ -36,10 +49,65 @@ public class ControlFlowExercises {
 //				16
 //				256
 //				65536
+
+//					Long num = 2L;
+//					do {
+//						System.out.println(num);
+//						num *= num;
+//					} while (num < 1000000);
+
 //
 // 		c. For
 //
 //			- refactor the previous two exercises to use a for loop instead
+
+// 1a.
+//					int i = 5;
+//					while (i <= 15) {
+//						System.out.print(i + " ");
+//						i++;
+//					}
+
+		// For Loop
+//					for (int i = 5; i <=15; i++) {
+//						System.out.print(i + " ");
+//					}
+
+// 1b.
+//					int num = 0;
+//					do {
+//						System.out.println(num);
+//						num += 2;
+//					} while (num <= 100);
+
+		// For Loop
+//					for (int num = 0; num <= 100; num += 2) {
+//						System.out.println(num);
+//					}
+
+//					int num = 100;
+//					do {
+//						System.out.println(num);
+//						num -= 5;
+//					} while (num >= -10);
+
+		// For Loop
+//					for (int num = 100; num >= -10; num -= 5) {
+//						System.out.println(num);
+//					}
+
+//					Long num = 2L;
+//					do {
+//						System.out.println(num);
+//						num *= num;
+//					} while (num < 1000000);
+
+		// For Loop
+//					for (Long num = 2L; num < 1000000; num *= num) {
+//						System.out.println(num);
+//					}
+
+
 //
 // 2. Fizzbuzz
 //
