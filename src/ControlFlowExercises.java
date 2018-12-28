@@ -201,25 +201,37 @@ public class ControlFlowExercises {
 
 
 				Scanner sc = new Scanner(System.in);
-				boolean confirm =
+				String proceed;
+				boolean confirm;
 
 				do {
-					System.out.println("Please enter a grade from 0 to 100: ");
+					System.out.println("\nPlease enter a grade from 0 to 100: ");
 					int numGrade = sc.nextInt();
 
 					if (numGrade <= 59) {
-						System.out.println("Your grade is an F.");
+						System.out.println("\nYour grade is an F");
+					} else if (numGrade <= 63) {
+						System.out.println("\nYour grade is a D-");
 					} else if (numGrade <= 66) {
-						System.out.println("Your grade is a D.");
+						System.out.println("\nYour grade is a D+");
+					} else if (numGrade <= 73) {
+						System.out.println("\nYour grade is a C-");
 					} else if (numGrade <= 79) {
-						System.out.println("Your grade is a C.");
+						System.out.println("\nYour grade is a C+");
+					} else if (numGrade <= 83) {
+						System.out.println("\nYour grade is a B-");
 					} else if (numGrade <= 87) {
-						System.out.println("Your grade is a B.");
+						System.out.println("\nYour grade is a B+");
+					} else if (numGrade <= 94) {
+						System.out.println("\nYour grade is an A-");
 					} else {
-						System.out.println("Your grade is an A.");
+						System.out.println("\nYour grade is an A+");
 					}
 
-				} while ();
+					System.out.println("\nWould you like to enter another grade?");
+					proceed = sc.next();
+					confirm = proceed.equalsIgnoreCase("y") || proceed.equalsIgnoreCase("yes");
+				} while (confirm);
 
 //
 // **Bonus**
