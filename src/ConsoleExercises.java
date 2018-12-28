@@ -1,3 +1,6 @@
+// Lesson - Java I - Console Input and Output
+// Status - Complete
+
 import java.util.Scanner;
 
 public class ConsoleExercises {
