@@ -7,10 +7,10 @@ public class StringExercise {
 // 			message that contains the desired output and print it out to the console.
 //
 //		- Do this with only one string variable and one print statement.
-//
+
 //				We don't need no education
 //				We don't need no thought control
-//
+
 //				Check "this" out!, "s inside of "s!
 //
 //				In windows, the main drive is usually C:\
@@ -18,6 +18,15 @@ public class StringExercise {
 //				I can do backslashes \, double backslashes \\,
 //				and the amazing triple backslash \\\!
 //
+				String message = "We don\'t need no education\n" +
+						"We don\'t need no thought control\n\n" +
+						"Check \"this\" out!, \"s inside of \"s!\n\n" +
+						"In windows, the main drive is usually C:\\\n\n" +
+						"I can do backslashes \\, double backslashes \\\\,\n" +
+						"and the amazing triple backslash \\\\\\!";
+
+				System.out.println(message);
+
 //
 // 2. Create a class named Bob with a main method for the following exercise.
 //		Bob is a lackadaisical teenager. In conversation, his responses are very limited.
