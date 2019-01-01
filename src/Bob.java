@@ -17,17 +17,21 @@ public class Bob {
 // 		can have a conversation with Bob.
 
         System.out.println("Hello, I'm bob.");
-        String userInput = sc.nextLine();
+        String userInput;
 
-        if (userInput.endsWith("?")) {
-            System.out.println("Sure.");
-        } else if (userInput.endsWith("!")) {
-            System.out.println("Whoa, chill out!");
-        } else if (userInput.isEmpty()) {
-            System.out.println("Fine. Be that way!");
-        } else {
-            System.out.println("Whatever.");
-        }
+        do {
+             userInput = sc.nextLine();
+            if (userInput.endsWith("?")) {
+                System.out.println("Sure.");
+            } else if (userInput.endsWith("!")) {
+                System.out.println("Whoa, chill out!");
+            } else if (userInput.trim().isEmpty()) {
+                System.out.println("Fine. Be that way!");
+            } else {
+                System.out.println("Whatever.");
+            }
+
+        } while (!userInput.equalsIgnoreCase("bye") && !userInput.equalsIgnoreCase("goodbye"));
 
 
 
