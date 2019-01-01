@@ -1,4 +1,4 @@
-package LessonNotes;
+package Java1LessonNotes;
 
 public class JavaSyntaxDataTypesAndVariables {
 

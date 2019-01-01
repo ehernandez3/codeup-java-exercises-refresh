@@ -1,7 +1,5 @@
 // Lesson - Java I - Console Input and Output
-package LessonNotes;
-
-import java.util.Scanner;
+package Java1LessonNotes;
 
 public class ConsoleInputAndOutput {
 

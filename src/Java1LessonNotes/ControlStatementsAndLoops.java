@@ -1,6 +1,6 @@
 // Lesson - Java I - Control statements and loops
 
-package LessonNotes;
+package Java1LessonNotes;
 
 public class ControlStatementsAndLoops {
 	public static void main(String[] args) {
