@@ -1,3 +1,5 @@
+// Lesson - Java I - Strings
+
 import java.util.Scanner;
 
 public class Bob {

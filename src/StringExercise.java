@@ -1,3 +1,5 @@
+// Lesson - Java I - Strings
+
 public class StringExercise {
 	public static void main(String[] args) {
 
