@@ -1,4 +1,5 @@
 // Lesson - Java I - Strings
+// Status - Completed
 
 import java.util.Scanner;
 
