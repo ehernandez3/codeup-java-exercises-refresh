@@ -1,28 +1,33 @@
 // Lesson - Java I -  Methods
 // Status -
 
+import java.util.Scanner;
+
 public class MethodsExercises {
     public static void main(String[] args) {
-
+        Scanner sc = new Scanner (System.in);
         // Testing Exercise 1
-            double addition = add(3,7);
-            double subtraction = subtract(15,4);
-            double multiplication = multiply(6,4);
-            double division = divide(9,3);
-            double modulus = modulus(6,3);
-
-            System.out.println(addition);
-            System.out.println(subtraction);
-            System.out.println(multiplication);
-            System.out.println(division);
-            System.out.println(modulus);
-            System.out.println(multiplyBonus(5,4));
-            System.out.println(multiplyRecursion(5,5));
+//            double addition = add(3,7);
+//            double subtraction = subtract(15,4);
+//            double multiplication = multiply(6,4);
+//            double division = divide(9,3);
+//            double modulus = modulus(6,3);
+//
+//            System.out.println(addition);
+//            System.out.println(subtraction);
+//            System.out.println(multiplication);
+//            System.out.println(division);
+//            System.out.println(modulus);
+//            System.out.println(multiplyBonus(5,4));
+//            System.out.println(multiplyRecursion(5,5));
 
         // Testing Exercise 2
+//            System.out.println("Enter a number between 1 and 10: ");
+//            int userInput = getInt(1, 10);
 
         // Testing Exercise 3
-
+//            System.out.println(calculateFactorial(5));
+            userInteractionFactorial(sc);
         // Testing Exercise 4
 
     }
@@ -73,7 +78,7 @@ public class MethodsExercises {
     public static double multiplyBonus(double num1, double num2) {
         double result = 0;
         for (double i = 1; i <= num2; i++) {
-            result = result + num1;
+            result += num1;
         }
         return result;
     }
@@ -96,6 +101,7 @@ public class MethodsExercises {
 //
 //
 // 2. Create a method that validates that user input is in a certain range
+
 //
 //      The method signature should look like this:
 //
@@ -108,6 +114,20 @@ public class MethodsExercises {
 //
 //      If the input is invalid, prompt the user again.
 //      Hint: recursion might be helpful here!
+
+    public static int getInt(int min, int max) {
+        Scanner sc = new Scanner(System.in);
+//        System.out.print("Enter a number between " + min + " and " + max + ":\n");
+        int userInput = sc.nextInt();
+
+
+        if ((userInput >= min) && (userInput <= max)) {
+            return userInput;
+        } else {
+            System.out.println("\nYour number is out of range. Please try again.\n");
+        }
+        return getInt(min, max);
+    }
 //
 //
 // 3. Calculate the factorial of a number.
@@ -127,6 +147,57 @@ public class MethodsExercises {
 //              2! = 1 x 2           = 2
 //              3! = 1 x 2 x 3       = 6
 //              4! = 1 x 2 x 3 x 4   = 24
+
+
+        public static long calculateFactorial(int num) {
+            long output = 1;
+            for (long i = 1; i <= num; i++) {
+                output *= i;
+            }
+            return output;
+        }
+
+
+        public static void userInteractionFactorial(Scanner sc) {
+            Boolean willContinue;
+            String userChoice;
+
+            do {
+                System.out.println("\nEnter a number from 1 to 10: \n");
+                int userInt = getInt(1, 10);
+                System.out.println("The factorial of " + userInt + " is " +
+                        calculateFactorial(userInt));
+                do {
+                    System.out.println("\nWould you like to continue? [y/n]: \n");
+                    userChoice = sc.next().trim();
+
+                } while (!userChoice.equalsIgnoreCase("y") && !userChoice.equalsIgnoreCase("n"));
+                    willContinue = userChoice.equalsIgnoreCase("y");
+            } while (willContinue);
+        }
+
+
+
+
+//            System.out.println("Would you like to find the factorial of a number? [y/n]");
+//            String userResponse = sc.nextLine();
+//
+//            if (userResponse.equalsIgnoreCase("y")) {
+////                int userInt = getInt(1, 10);
+//
+//            }
+
+
+
+//                if (userInput == getInteger(1, 10)) {
+
+
+
+//                System.out.println("Your factor of " + userInput + " is " + factor);
+//            }
+
+
+
 //
 //      Bonus
 //
