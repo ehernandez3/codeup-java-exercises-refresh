@@ -27,8 +27,9 @@ public class MethodsExercises {
 
         // Testing Exercise 3
 //            System.out.println(calculateFactorial(5));
-            userInteractionFactorial(sc);
+//            userInteractionFactorial(sc);
         // Testing Exercise 4
+        System.out.println(rollDice());
 
     }
 
@@ -176,28 +177,6 @@ public class MethodsExercises {
             } while (willContinue);
         }
 
-
-
-
-//            System.out.println("Would you like to find the factorial of a number? [y/n]");
-//            String userResponse = sc.nextLine();
-//
-//            if (userResponse.equalsIgnoreCase("y")) {
-////                int userInt = getInt(1, 10);
-//
-//            }
-
-
-
-//                if (userInput == getInteger(1, 10)) {
-
-
-
-//                System.out.println("Your factor of " + userInput + " is " + factor);
-//            }
-
-
-
 //
 //      Bonus
 //
@@ -216,6 +195,24 @@ public class MethodsExercises {
 //          he/she wants to roll the dice again.
 //      -Use static methods to implement the method(s) that generate the random numbers.
 //      -Use the .random method of the java.lang.Math class to generate random numbers.
+
+        public static int randomWithRandom(int min, int max) {
+            int range = (max - min) + 1;
+            return (int)(Math.random() * range) + min;
+
+        }
+
+
+        public static void diceRollInteraction(Scanner sc) {
+            System.out.println("Enter the number of sides for a pair of dice: ");
+            int userSides = sc.nextInt();
+            System.out.println("To roll the dice type \"roll\": ");
+            String roll = sc.nextLine();
+            if(roll.equalsIgnoreCase("roll")) {
+                randomWithRandom(1,10);
+            }
+
+        }
 //
 // 5. Game Development 101
 //
