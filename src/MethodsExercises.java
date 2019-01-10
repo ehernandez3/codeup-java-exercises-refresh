@@ -1,6 +1,7 @@
 // Lesson - Java I -  Methods
 // Status -
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class MethodsExercises {
@@ -29,7 +30,7 @@ public class MethodsExercises {
 //            System.out.println(calculateFactorial(5));
 //            userInteractionFactorial(sc);
         // Testing Exercise 4
-        System.out.println(rollDice());
+        diceRollInteraction(sc);
 
     }
 
@@ -196,23 +197,52 @@ public class MethodsExercises {
 //      -Use static methods to implement the method(s) that generate the random numbers.
 //      -Use the .random method of the java.lang.Math class to generate random numbers.
 
-        public static int randomWithRandom(int min, int max) {
-            int range = (max - min) + 1;
-            return (int)(Math.random() * range) + min;
+        public static int random(int numOfSides) {
+            return (int)(Math.random() * numOfSides) + 1;
 
         }
 
 
         public static void diceRollInteraction(Scanner sc) {
-            System.out.println("Enter the number of sides for a pair of dice: ");
-            int userSides = sc.nextInt();
-            System.out.println("To roll the dice type \"roll\": ");
-            String roll = sc.nextLine();
-            if(roll.equalsIgnoreCase("roll")) {
-                randomWithRandom(1,10);
-            }
+            String roll;
+            Boolean startRoll;
+            Boolean exit;
+            String playAgain;
+            Boolean proceed;
+
+            System.out.println("\n----- Interactive Dice Roller -----\n");
+            do {
+                System.out.println("\nHow many sides would you like for your pair of dice? (sides per dice): ");
+                int diceSides = sc.nextInt();
+                sc.nextLine();
+
+                do {
+                    System.out.println("\nType \"roll\" to roll the dice: ");
+                    roll = sc.nextLine();
+                    startRoll = roll.trim().equalsIgnoreCase("roll");
+                } while (!startRoll);
+                    int firstDiceRoll = random(diceSides);
+                    int secondDiceRoll = random(diceSides);
+                    System.out.println("\nYou rolled a " + firstDiceRoll + " and a " + secondDiceRoll + ".");
+                    System.out.println("The total is " + (firstDiceRoll + secondDiceRoll) + ".");
+
+                do {
+                    System.out.println("\nWould you like to roll again? [y/n]: ");
+                    playAgain = sc.nextLine();
+                    proceed = playAgain.trim().equalsIgnoreCase("y");
+                    exit = playAgain.trim().equalsIgnoreCase("n");
+                    if (exit) {
+                        System.out.println("\nSee ya later!");
+                    }
+                } while (!proceed & !exit);
+
+            } while (proceed);
 
         }
+
+
+
+
 //
 // 5. Game Development 101
 //
