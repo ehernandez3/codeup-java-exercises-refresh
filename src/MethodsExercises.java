@@ -32,6 +32,8 @@ public class MethodsExercises {
         // Testing Exercise 4
         diceRollInteraction(sc);
 
+        // Testing Exercise 5
+
     }
 
 
@@ -261,6 +263,9 @@ public class MethodsExercises {
 //      Hints
 //
 //          - Use the random method of the java.lang.Math class to generate a random number.
+
+
+
 //
 //      Bonus
 //
