@@ -1,3 +1,6 @@
+// Lesson - Java I - Strings
+// Status - Completed
+
 public class StringExercise {
 	public static void main(String[] args) {
 
